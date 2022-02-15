@@ -1,0 +1,10 @@
+<div class="col centered">
+  <p>three works!</p>
+  <button (click)="goToPage('four')">to four</button>
+  <div class="row centered container">
+  <button (click)="toIncrease()">+</button>
+  <button (click)="toDecrease()">-</button>
+  <button (click)="toReset()">reset</button>
+  </div>
+  <div>{{subject | async}}</div>
+</div>

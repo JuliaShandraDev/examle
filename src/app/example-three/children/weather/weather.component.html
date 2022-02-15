@@ -1,0 +1,22 @@
+<input text="text" [(ngModel)]="name">
+<button (click)=viewWeather()>Click</button>
+<div *ngIf="weatherCity$ | async as weatherCity">
+  <p>{{day | date:'yyyy-MM-dd'}}</p>
+  <p>Name city: {{ weatherCity.name}}</p>
+  <p>Temp-riche: {{ weatherCity.main.temp}}&deg;C</p>
+  <p>Speed: {{ weatherCity.wind.speed}}</p>
+  <p>Description: {{weatherCity.weather[0].description}}</p>
+  <p>Main: {{ weatherCity.weather[0].main}}</p>
+</div>
+
+<form [formGroup]="myRating" class="movieform">
+  <div class="">
+    <label>How was it :</label>
+    <app-custom-rating formControlName="rating"></app-custom-rating>
+  </div>
+  <button (click)="resetForm()">Reset</button>
+  <button (click)="enable()">Enable</button>
+  <button (click)="disable()">Disable</button>
+</form>
+
+<button (click)="goToPage('form-view')">Form-view</button>

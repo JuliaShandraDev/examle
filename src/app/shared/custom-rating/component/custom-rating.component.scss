@@ -1,0 +1,14 @@
+.rating {
+  display:flex;
+  &__system {}
+  &__item {
+    fill:black;
+    &.selected {
+      fill:orange;
+    }
+  }
+  &__label {
+    line-height: 25px;
+    margin-left:5px;
+  }
+}
